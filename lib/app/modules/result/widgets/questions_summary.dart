@@ -7,14 +7,15 @@ class QuestionSummary extends StatelessWidget {
   @override
   Widget build(context) {
     return SizedBox(
-      height: 300,
+      height: 400,
+      width: double.infinity,
       child: SingleChildScrollView(
         child: Column(
           children: summaryData.map(
             (data) {
               return Card(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                  padding: const EdgeInsets.all(5),
                   child: Row(children: [
                     Container(
                       width: 25,
@@ -28,8 +29,12 @@ class QuestionSummary extends StatelessWidget {
                       child: Center(
                         child: Text(
                           ((data['question_index'] as int) + 1).toString(),
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      width: 3,
                     ),
                     Expanded(
                       child: Column(
@@ -39,16 +44,26 @@ class QuestionSummary extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 18,
+                              color: Colors.white,
                             ),
                           ),
-                          const SizedBox(height: 5),
+                          const SizedBox(height: 6),
                           Text(
                             'Your answer : ${data['user_answer'] as String}',
                             textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
                           ),
+                          const SizedBox(height: 6),
                           Text(
                             'Correct answer : ${data['correct_answer'] as String}',
                             textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
                           ),
                         ],
                       ),

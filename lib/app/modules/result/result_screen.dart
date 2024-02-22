@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp_2/data/questions.dart';
-import 'package:myapp_2/questions_summary.dart';
+import 'package:myapp_2/app/data/questions.dart';
+import 'package:myapp_2/app/modules/result/widgets/questions_summary.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({
@@ -43,14 +43,14 @@ class ResultScreen extends StatelessWidget {
               'you answerd $numCorrectQuestions out of $numTotalQuestions questions correctly',
               style: const TextStyle(
                 fontSize: 20,
-                color: Colors.white,
+                // color: Colors.white,
                 shadows: [
-                    Shadow(
-                      offset: Offset(2.0, 10.0),
-                      blurRadius: 10.0,
-                      color: Colors.black38, // Adjust color as needed
-                    ),
-                  ],
+                  Shadow(
+                    offset: Offset(0.0, 0.0),
+                    blurRadius: 1.0,
+                    // color: Colors.black38, // Adjust color as needed
+                  ),
+                ],
               ),
               textAlign: TextAlign.center,
             ),
@@ -67,7 +67,7 @@ class ResultScreen extends StatelessWidget {
                 'Restart Text',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.white,
+                  // color: Colors.white,
                   shadows: [
                     Shadow(
                       offset: Offset(2.0, 10.0),

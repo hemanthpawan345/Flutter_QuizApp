@@ -1,4 +1,4 @@
-import 'package:myapp_2/models/quiz_question.dart';
+import 'package:myapp_2/app/models/quiz_question.dart';
 
 const questions = [
   QuizQuestion(
